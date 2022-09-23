@@ -1,18 +1,18 @@
 @section('title', 'Reset password')
 
-<div>
+<div class="flex flex-col justify-center min-h-screen py-12 bg-secondary-300 sm:px-6 lg:px-8">
     <div class="sm:mx-auto sm:w-full sm:max-w-md">
         <a href="{{ route('home') }}">
-            <x-logo class="w-auto h-16 mx-auto text-indigo-600" />
+            <x-logo class="w-auto h-16 mx-auto text-primary" />
         </a>
 
-        <h2 class="mt-6 text-3xl font-extrabold text-center text-gray-900 leading-9">
+        <h2 class="mt-6 text-3xl font-extrabold text-center text-gray-400 leading-9">
             Reset password
         </h2>
     </div>
 
     <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div class="px-4 py-8 bg-white shadow sm:rounded-lg sm:px-10">
+        <div class="px-4 py-8 bg-secondary-400 shadow sm:rounded-lg sm:px-10">
             @if ($emailSentMessage)
                 <div class="rounded-md bg-green-50 p-4">
                     <div class="flex">
@@ -32,7 +32,7 @@
             @else
                 <form wire:submit.prevent="sendResetPasswordLink">
                     <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700 leading-5">
+                        <label for="email" class="block text-sm font-medium text-gray-400 leading-5">
                             Email address
                         </label>
 
@@ -47,7 +47,7 @@
 
                     <div class="mt-6">
                         <span class="block w-full rounded-md shadow-sm">
-                            <button type="submit" class="flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:ring-indigo active:bg-indigo-700 transition duration-150 ease-in-out">
+                            <button type="submit" class="flex justify-center w-full px-4 py-2 text-sm font-medium text-secondary-400 bg-primary border border-transparent rounded-md hover:bg-indigo-500 focus:outline-none focus:border-indigo-600 focus:ring-indigo active:bg-indigo-600 transition duration-150 ease-in-out">
                                 Send password reset link
                             </button>
                         </span>

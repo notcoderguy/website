@@ -1,3 +1,5 @@
+@section('title', 'Maintenance')
+
 <div class="bg-secondary-300 min-h-full flex flex-col lg:relative">
     <div class="flex-grow flex flex-col">
         <main class="flex-grow flex flex-col bg-secondary-300">
