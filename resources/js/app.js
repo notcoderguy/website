@@ -1,7 +1,7 @@
 import Alpine from 'alpinejs'
-var turbolinks = require("turbolinks")
+var Turbolinks = require("turbolinks")
 
-turbolinks.start()
+Turbolinks.start()
 
 window.Alpine = Alpine
 Alpine.start()

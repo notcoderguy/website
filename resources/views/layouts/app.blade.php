@@ -23,9 +23,6 @@
     <meta name="msapplication-TileImage" content="{{ asset('mstile-144x144.png') }}">
     <meta name="theme-color" content="#1e2124">
 
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     @livewireStyles
     @livewireScripts

@@ -14,11 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
+            $table->integer('id')->unsigned()->unique()->primary();
+            $table->string('name')->nullable();
+            $table->string('username')->unique();
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
+            $table->string('avatar')->nullable();
+            $table->string('user_type')->enum(['admin', 'user'])->default('user');
+            $table->string('github_token')->nullable();
+            $table->string('github_refresh_token')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

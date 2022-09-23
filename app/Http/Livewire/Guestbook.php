@@ -8,6 +8,7 @@ class Guestbook extends Component
 {
     public function render()
     {
-        return view('livewire.guestbook');
+        // return view('livewire.guestbook');
+        return view('maintenance');
     }
 }

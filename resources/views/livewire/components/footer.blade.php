@@ -3,27 +3,27 @@
         <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
             <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
                 <div class="px-5 py-2">
-                    <a href="" class="text-base text-primary hover:text-indigo-500"> Refund
+                    <a href="{{ route('page', 'refund') }}" class="text-base text-primary hover:text-indigo-500"> Refund
                     </a>
                 </div>
 
                 <div class="px-5 py-2">
-                    <a href="" class="text-base text-primary hover:text-indigo-500"> Support
+                    <a href="{{ route('page', 'support') }}" class="text-base text-primary hover:text-indigo-500"> Support
                     </a>
                 </div>
 
                 <div class="px-5 py-2">
-                    <a href="" class="text-base text-primary hover:text-indigo-500"> Terms
+                    <a href="{{ route('page', 'terms') }}" class="text-base text-primary hover:text-indigo-500"> Terms
                     </a>
                 </div>
 
                 <div class="px-5 py-2">
-                    <a href="" class="text-base text-primary hover:text-indigo-500">
+                    <a href="{{ route('page', 'privacy') }}" class="text-base text-primary hover:text-indigo-500">
                         Privacy </a>
                 </div>
 
                 <div class="px-5 py-2">
-                    <a href="" class="text-base text-primary hover:text-indigo-500"> Contact Me
+                    <a href="{{ route('newsletter') }}" class="text-base text-primary hover:text-indigo-500"> Newsletter
                     </a>
                 </div>
             </nav>

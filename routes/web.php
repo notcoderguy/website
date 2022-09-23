@@ -8,6 +8,7 @@ use App\Http\Livewire\Newsletter;
 use App\Http\Livewire\Page;
 use App\Http\Livewire\Projects;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,7 @@ Route::get('/projects', Projects::class)->name('projects');
 
 Route::get('/about', About::class)->name('about');
 
-Route::prefix('auth')->group(function() {
-    require __DIR__ . '/auth.php';
+Route::prefix('auth')->group(function () {
+    Route::get('/github', [AuthController::class, 'redirectToGithub'])->name('github');
+    Route::get('/github/callback', [AuthController::class, 'handleGithubCallback'])->name('github.callback');
 });

@@ -8,6 +8,7 @@ class Newsletter extends Component
 {
     public function render()
     {
-        return view('livewire.newsletter');
+        // return view('livewire.newsletter');
+        return view('maintenance');
     }
 }
