@@ -1,5 +1,5 @@
 <div>
-    <footer class="bg-secondary-400">
+    <footer class="bg-gray-100 dark:bg-secondary-400">
         <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
             <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
                 <div class="px-5 py-2">
@@ -66,7 +66,8 @@
                 </a>
 
             </div>
-            <p class="mt-8 text-center text-base text-gray-400">&copy; 2022 <a href="{{ route('home') }}"
+            @livewire('components.spotify')
+            <p class="mt-8 text-center text-base text-gray-400">&copy; 2022 <a href="{{ route('home') }} data-turbo-preload"
                     class=" text-primary hover:text-indigo-500">NotCoderGuy</a>. All rights reserved.</p>
         </div>
     </footer>

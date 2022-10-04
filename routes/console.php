@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
 
 /*
@@ -14,6 +13,17 @@ use Illuminate\Support\Facades\Artisan;
 |
 */
 
-Artisan::command('inspire', function () {
-    $this->comment(Inspiring::quote());
-})->purpose('Display an inspiring quote');
+Artisan::command('assign:admin {username}', function ($username) {
+    $user = \App\Models\User::where('username', $username)->first();
+    if ($user) {
+        if ($user->user_type === 'admin') {
+            $this->comment('User '. $username . ' is already an admin.');
+        } else {
+            $user->user_type = 'admin';
+            $user->save();
+            $this->comment('User '. $username . ' is now an admin.');
+        }
+    } else {
+        $this->error('User ' . $username . ' not found.');
+    }
+})->purpose('Assign a user to admin');

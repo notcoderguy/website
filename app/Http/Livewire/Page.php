@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use Illuminate\Support\Facades\Redis;
 use Livewire\Component;
 
 class Page extends Component
@@ -10,6 +11,5 @@ class Page extends Component
     {
         // return view('livewire.page');
         return view('maintenance');
-
     }
 }

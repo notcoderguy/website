@@ -14,7 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('guestbooks', function (Blueprint $table) {
-            $table->id();
+            $table->integer('id')->unsigned()->unique()->autoIncrement();
+            $table->integer('user_id')->unsigned();
+            $table->binary('message')->required();
             $table->timestamps();
         });
     }

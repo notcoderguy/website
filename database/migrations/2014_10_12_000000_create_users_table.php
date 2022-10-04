@@ -19,9 +19,9 @@ return new class extends Migration
             $table->string('username')->unique();
             $table->string('email')->unique();
             $table->string('avatar')->nullable();
-            $table->string('user_type')->enum(['admin', 'user'])->default('user');
+            $table->string('user_type')->default('user');
+            $table->string('can_sign')->default('yes');
             $table->string('github_token')->nullable();
-            $table->string('github_refresh_token')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

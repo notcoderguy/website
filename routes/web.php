@@ -39,3 +39,7 @@ Route::prefix('auth')->group(function () {
     Route::get('/github', [AuthController::class, 'redirectToGithub'])->name('github');
     Route::get('/github/callback', [AuthController::class, 'handleGithubCallback'])->name('github.callback');
 });
+
+Route::prefix('admin')->middleware(['admin'])->group(function () {
+    require __DIR__.'/admin.php';
+});

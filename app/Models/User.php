@@ -31,8 +31,8 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
+        'can_sign',
         'github_token',
-        'github_refresh_token',
         'remember_token',
         'user_type',
     ];

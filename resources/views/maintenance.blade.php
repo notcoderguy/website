@@ -1,8 +1,8 @@
 @section('title', 'Maintenance')
 
-<div class="bg-secondary-300 min-h-full flex flex-col lg:relative">
+<div class="bg-gray-300 dark:bg-secondary-300 min-h-full flex flex-col lg:relative">
     <div class="flex-grow flex flex-col">
-        <main class="flex-grow flex flex-col bg-secondary-300">
+        <main class="flex-grow flex flex-col bg-gray-300 dark:bg-secondary-300">
             <div class="flex-grow mx-auto max-w-7xl w-full flex flex-col px-4 sm:px-6 lg:px-8">
                 <div class="flex-shrink-0 pt-10 sm:pt-16">
                     <a href="{{ route('home') }}" class="inline-flex">
@@ -11,7 +11,7 @@
                 </div>
                 <div class="flex-shrink-0 my-auto py-16 sm:py-32">
                     <p class="text-sm font-semibold text-primary uppercase tracking-wide">This page is currently under maintenance.</p>
-                    <h1 class="mt-2 text-4xl font-extrabold text-gray-400 tracking-tight sm:text-5xl">Maintenance
+                    <h1 class="mt-2 text-4xl font-extrabold text-secondary-200 dark:text-gray-400 tracking-tight sm:text-5xl">Maintenance
                     </h1>
                     <div class="mt-6">
                         <a href="{{ route('home') }}" class="text-base font-medium text-primary hover:text-indigo-500">Go
