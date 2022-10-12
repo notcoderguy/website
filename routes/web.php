@@ -35,6 +35,10 @@ Route::get('/projects', Projects::class)->name('projects');
 
 Route::get('/about', About::class)->name('about');
 
+Route::prefix('page')->group(function () {
+    Route::get('/{slug}', Page::class)->name('page');
+});
+
 Route::prefix('auth')->group(function () {
     Route::get('/github', [AuthController::class, 'redirectToGithub'])->name('github');
     Route::get('/github/callback', [AuthController::class, 'handleGithubCallback'])->name('github.callback');
