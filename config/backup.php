@@ -8,7 +8,7 @@ return [
          * The name of this application. You can use this name to monitor
          * the backups.
          */
-        'name' => env('APP_NAME', 'ncg-web-bkp'),
+        'name' => '',
 
         'source' => [
 
@@ -116,8 +116,8 @@ return [
              * The disk names on which the backups will be stored.
              */
             'disks' => [
-                'local',
-                'google'
+                'google',
+                // 'local',
             ],
         ],
 
@@ -152,12 +152,12 @@ return [
     'notifications' => [
 
         'notifications' => [
-            \Spatie\Backup\Notifications\Notifications\BackupHasFailedNotification::class => ['mail'],
-            \Spatie\Backup\Notifications\Notifications\UnhealthyBackupWasFoundNotification::class => ['mail'],
-            \Spatie\Backup\Notifications\Notifications\CleanupHasFailedNotification::class => ['mail'],
-            \Spatie\Backup\Notifications\Notifications\BackupWasSuccessfulNotification::class => ['mail'],
-            \Spatie\Backup\Notifications\Notifications\HealthyBackupWasFoundNotification::class => ['mail'],
-            \Spatie\Backup\Notifications\Notifications\CleanupWasSuccessfulNotification::class => ['mail'],
+            \Spatie\Backup\Notifications\Notifications\BackupHasFailedNotification::class => ['discord'],
+            \Spatie\Backup\Notifications\Notifications\UnhealthyBackupWasFoundNotification::class => ['discord'],
+            \Spatie\Backup\Notifications\Notifications\CleanupHasFailedNotification::class => ['discord'],
+            \Spatie\Backup\Notifications\Notifications\BackupWasSuccessfulNotification::class => ['discord'],
+            \Spatie\Backup\Notifications\Notifications\HealthyBackupWasFoundNotification::class => ['discord'],
+            \Spatie\Backup\Notifications\Notifications\CleanupWasSuccessfulNotification::class => ['discord'],
         ],
 
         /*
@@ -190,7 +190,7 @@ return [
         ],
 
         'discord' => [
-            'webhook_url' => '',
+            'webhook_url' => 'https://discord.com/api/webhooks/1029720531227902003/fU1-iQdp3NTlFzSZn2eMUUms3frN377ZGXRlNzj8MLWu3SubCSv4Fh-jVZs9ovaYrV3B',
 
             /*
              * If this is an empty string, the name field on the webhook will be used.
@@ -211,8 +211,11 @@ return [
      */
     'monitor_backups' => [
         [
-            'name' => env('APP_NAME', 'ncg-web-bkp'),
-            'disks' => ['local'],
+            'name' => '',
+            'disks' => [
+                'google', 
+                // 'local'
+            ],
             'health_checks' => [
                 \Spatie\Backup\Tasks\Monitor\HealthChecks\MaximumAgeInDays::class => 1,
                 \Spatie\Backup\Tasks\Monitor\HealthChecks\MaximumStorageInMegabytes::class => 5000,

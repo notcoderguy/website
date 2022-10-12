@@ -27,6 +27,7 @@ return [
     | Supported Drivers: "local", "ftp", "sftp", "s3"
     |
     */
+    'cloud' => env('FILESYSTEM_CLOUD', 's3'),
 
     'disks' => [
 
@@ -49,8 +50,7 @@ return [
             'clientId' => env('GOOGLE_DRIVE_CLIENT_ID'),
             'clientSecret' => env('GOOGLE_DRIVE_CLIENT_SECRET'),
             'refreshToken' => env('GOOGLE_DRIVE_REFRESH_TOKEN'),
-            'folder' => env('GOOGLE_DRIVE_FOLDER'), // without folder is root of drive or team drive
-            //'teamDriveId' => env('GOOGLE_DRIVE_TEAM_DRIVE_ID'),
+            'folder' => env('GOOGLE_DRIVE_FOLDER'),
         ],
 
     ],
