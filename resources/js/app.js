@@ -3,10 +3,12 @@ import Alpine from 'alpinejs'
 window.Alpine = Alpine
 Alpine.start()
 
-// Turbo
-import * as Turbo from '@hotwired/turbo'
-window.Turbo = Turbo
-Turbo.start()
+// Flowbite
+import 'flowbite'
+
+// Turbolinks
+import Turbolinks from 'turbolinks'
+Turbolinks.start()
 
 // Theme Changer
 // Icons
