@@ -19,28 +19,42 @@ class Guestbook extends Component
             $this->validate([
                 'sign' => 'required|min:2',
             ]);
-    
+
             $newSign = ModelsGuestbook::create([
                 'user_id' => auth()->user()->id,
                 'message' => $this->sign
             ]);
-    
+
             $this->sign = '';
-    
-            session()->flash('success', 'Your sign has been posted!');
-    
+
+            session()->flash('success_sign', 'Your sign has been posted!');
+
             $this->signs->push($newSign);
         } catch (Exception $e) {
-            session()->flash('error', $e->getMessage());
+            session()->flash('error_sign', $e->getMessage());
         }
     }
 
-    
+    public function deleteSign($id)
+    {
+        try {
+            $sign = ModelsGuestbook::find($id);
+            $sign->delete();
+
+            $this->signs = $this->signs->filter(function ($value, $key) use ($id) {
+                return $value->id != $id;
+            });
+        } catch (Exception $e) {
+            //
+        }
+    }
+
+
     public function mount()
     {
         return [
             'signs' => $this->signs
-        ];        
+        ];
     }
 
     public function render()
@@ -54,5 +68,4 @@ class Guestbook extends Component
             'signs' => $this->signs,
         ]);
     }
-
 }
