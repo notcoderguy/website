@@ -43,7 +43,7 @@ class Spotify extends Component
         $this->response = Http::withHeaders([
             'Authorization' => 'Bearer ' . $this->token
         ])->get('https://api.spotify.com/v1/me/player/currently-playing')->json();
-                
+
         return $this->response;
     }
 
@@ -51,9 +51,14 @@ class Spotify extends Component
     {
         $data = $this->getResponse();
 
-        if ($data['is_playing'] == true) {
-            $this->currentTrack['title'] = $data['item']['name'];
-            $this->currentTrack['url'] = $data['item']['external_urls']['spotify'];
+        try {
+            if ($data['is_playing'] == true) {
+                $this->currentTrack['title'] = $data['item']['name'];
+                $this->currentTrack['url'] = $data['item']['external_urls']['spotify'];
+            }
+        } catch (\Throwable $th) {
+            $this->currentTrack['title'] = 'Not Playing';
+            $this->currentTrack['url'] = '';
         }
     }
 
