@@ -23,7 +23,7 @@
     <meta name="msapplication-TileImage" content="{{ asset('mstile-144x144.png') }}">
     <meta name="theme-color" content="#1e2124">
 
-    
+
     @livewireStyles
     @livewireScripts
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
@@ -40,12 +40,6 @@
         {{ $slot }}
     @endisset
     @livewire('components.footer')
-    <script type="text/javascript">
-        // Protect from Turbo
-        document.addEventListener('turbo:before-render', () => {
-            delete window.progress;
-        })
-    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9BJ77TMEY"></script>
     <script>
         window.dataLayer = window.dataLayer || [];

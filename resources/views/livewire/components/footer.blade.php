@@ -23,7 +23,7 @@
                 </div>
 
                 <div class="px-5 py-2">
-                    <a href="{{ route('newsletter') }}" class="text-base text-primary hover:text-indigo-500"> Newsletter
+                    <a href="{{ route('newsletter') }}" class="text-base text-primary hover:text-indigo-500" data-turbolinks="false"> Newsletter
                     </a>
                 </div>
             </nav>

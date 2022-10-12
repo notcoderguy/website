@@ -1,6 +1,6 @@
 @section('title', 'Maintenance')
 
-<div class="bg-gray-300 dark:bg-secondary-300 min-h-full flex flex-col lg:relative">
+<div class="bg-gray-300 dark:bg-secondary-300 min-h-full flex flex-col lg:relative min-h-screen">
     <div class="flex-grow flex flex-col">
         <main class="flex-grow flex flex-col bg-gray-300 dark:bg-secondary-300">
             <div class="flex-grow mx-auto max-w-7xl w-full flex flex-col px-4 sm:px-6 lg:px-8">
