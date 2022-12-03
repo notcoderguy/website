@@ -16,6 +16,7 @@
         "librarianphp/parsed": "^0.3.7",
         "livewire/livewire": "^2.10",
         "masbug/flysystem-google-drive-ext": "^2.2",
+        "sinnbeck/markdom": "^2.0",
         "spatie/laravel-backup": "^8.1"
     },
     "require-dev": {

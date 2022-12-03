@@ -196,7 +196,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Laravel\Socialite\SocialiteServiceProvider::class,
-
+        Sinnbeck\Markdom\MarkdomServiceProvider::class,
     ],
 
     /*
@@ -214,6 +214,7 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
 
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Markdom' => Sinnbeck\Markdom\Facades\Markdom::class,
     ])->toArray(),
 
 ];

@@ -1,4 +1,4 @@
-<div id="header" class="relative bg-gray-100 dark:bg-secondary-400" data-turbolinks-permanent>
+<div id="header" class="relative bg-gray-100 dark:bg-secondary-400">
     <div class="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
         <div class="flex justify-start lg:w-0 lg:flex-1">
             <a href="{{ route('home') }}">
@@ -11,14 +11,12 @@
             <a href="{{ route('home') }}" class="text-base font-medium text-primary hover:text-indigo-500"> Home </a>
             <a href="{{ route('about') }}" class="text-base font-medium text-primary hover:text-indigo-500"> About Me
             </a>
-            <a href="{{ route('newsletter') }}" class="text-base font-medium text-primary hover:text-indigo-500"
-                data-turbolinks="false">
+            <a href="{{ route('newsletter') }}" class="text-base font-medium text-primary hover:text-indigo-500">
                 Newsletter </a>
             <a href="{{ route('blog') }}" class="text-base font-medium text-primary hover:text-indigo-500"> Blog </a>
             <a href="{{ route('projects') }}" class="text-base font-medium text-primary hover:text-indigo-500"> Projects
             </a>
-            <a href="{{ route('guestbook') }}" class="text-base font-medium text-primary hover:text-indigo-500"
-                data-turbolinks="false">
+            <a href="{{ route('guestbook') }}" class="text-base font-medium text-primary hover:text-indigo-500">
                 GuestBook </a>
 
         </nav>
@@ -62,7 +60,7 @@
 
 </div>
 
-<div class="hidden md:hidden w-auto relative bg-gray-200 dark:bg-secondary-200 p-5" data-turbolinks-permanent id="navbar-default">
+<div class="hidden md:hidden w-auto relative bg-gray-200 dark:bg-secondary-200 p-5" id="navbar-default">
     <ul
         class="flex flex-col p-4 bg-gray-100 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-base md:font-medium md:border-0 md:bg-gray-100 dark:bg-secondary-400 md:dark:bg-secondary-400 dark:border-secondary-300">
         <li>
@@ -76,8 +74,7 @@
         </li>
         <li>
             <a href="{{ route('newsletter') }}"
-                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                data-turbolinks="false">Newsletter</a>
+                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Newsletter</a>
         </li>
         <li>
             <a href="{{ route('blog') }}"
@@ -89,8 +86,7 @@
         </li>
         <li>
             <a href="{{ route('guestbook') }}"
-                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                data-turbolinks="false">GuestBook</a>
+                class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">GuestBook</a>
         </li>
     </ul>
 </div>

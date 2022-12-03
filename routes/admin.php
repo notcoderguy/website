@@ -8,6 +8,9 @@ use App\Http\Livewire\Admin\Settings;
 use App\Http\Livewire\Admin\Guestbook;
 use Illuminate\Support\Facades\Route;
 
+
+Route::redirect('/', '/admin/dashboard');
+
 Route::get('/dashboard', Dashboard::class)->name('dashboard');
 
 Route::get('/guestbook', Guestbook::class)->name('admin.guestbook');
